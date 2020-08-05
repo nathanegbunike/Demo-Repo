@@ -1,0 +1,287 @@
+SECTION 3
+
+Flexbox, CSS Animations & Position
+
+FlexBox Intro
+
+
+makes your elements flexable - move around any way you want - in accordance to the screen size
+
+
+div class="Flexbox"><p>
+Flexbox Section -
+  needs a parent container in order to work. Elements inside
+of container can be adjusted, moved around easily</p>
+
+<div class="box" id="box1">Box 1</div> - class - attribute specifies one or more classnames 							for an element
+<div class="box" id="box1">Box 2</div>
+<div class="box" id="box1">Box 3</div>
+<div class="box" id="box1">Box 4</div>
+<div class="box" id="box1">Box 5</div>
+<div class="box" id="box1">Box 6</div> - each box has an ID 
+
+</div>
+
+
+so the CSS style will be:
+
+.Flexbox {
+  border: 3px solid black;
+  display: flex;
+  flex-wrap: wrap; - this is mobile responsive, so boxes will align in accordance to screen 			size
+  margin: 30px
+  justify-content: center; - keeps the boxes flexible but centered 
+  padding: 100px - place extra px for the boxes to wrap evenly (max 800p across page)
+}
+
+
+
+
+----------------------------------------------------------------------------------
+
+FlexBox
+
+
+justify-content: flex-start;
+
+the above will start the wrap at the begining (towards the left) when adjusting
+
+same applies to:
+
+flex-end
+
+
+
+justify-content: space-between;
+
+above space out between the boxes
+
+same applies to:
+
+space-around;
+
+
+
+flex-direction: row-reverse;
+
+above reverses the box roles around
+
+e.g. box 1 would be at the end of the rwo, 6 at the begining
+
+same applies to:
+
+flex-direction: column - reverse;
+
+
+REMEMBER
+
+the items you wan tto work on requires a parent container 
+this is made in the CSS:
+
+-calling the alias
+-using display:flex, flex-wrap and justify content to align your content 
+
+
+--------------------------------
+https://flexboxfroggy.com/      |
+				|
+game to learn flexbox           |
+---------------------------------
+
+
+----------------------------------------------------------------------------------
+
+
+Intro to CSS Animations 
+
+
+
+.box {
+  display: block;
+  background: blue;
+  height: 200px;
+  width: 200px;
+  margin: 10px;
+}
+
+
+above shows the default makings of the individual boxes in a class
+
+
+
+ANIMATION
+
+@keyframes exampleOne{
+  0%{
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+above is showing fading. 
+so at very begining of animation (0%) we can see the fading (1)
+to end of animation (100%) cannot see (0)
+
+
+- opacity - a couple of values within an element (values 0-1 zero cant see, 1 we can)
+
+
+then you'll add how the animation will perform:
+
+
+#box1 {						- identify the box
+  animation-name: exampleOne;			- call the animation name from above 									(keyframe)
+  animation-duration: 4s;			- how long the animation would take
+  animation-iteration-count: infinite;		- how long the animation should last for
+  animation-timing-function: linear;		- the speed of animation - here it stays 								the same along the duration
+}
+
+
+
+#box2 {
+  animation-name: exampleTwo;
+  animation-duration: 5s;
+  animation-iteration-count: 4s;		- how long it will rotate
+  animation-timing-function: ease-in-out;	- slows down at beginning & end
+  border-radius: 10%;				- box corners smoothed out
+  background-image: radial-gradient(circle, red, 	- color changes
+    orange, yellow, green);
+}
+
+
+----------------------------------------------------------------------------------
+
+More Animations
+
+
+@keyframes is used for animation but there are other types to support older browsers:
+
+@-o-keyframes
+@-moz-keyframes
+@-webkit-keyframes
+
+
+
+@keyframes exampleThree {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(.5);
+  }
+}
+
+the above has a scale method (supports 3d X, Y, Z axis)
+
+1 - normal size 
+ numbers greater will make image bigger 
+
+
+
+#box3 {
+  animation: exampleThree infinite 8s ease-in;   - infinite loop, duration, change
+  border-radius: 50%;
+  background: yellow;
+}
+
+ the above shows a short cut (instead of animation-etc)
+these can be all placed in one row
+
+
+
+@keyframes exampleFour {
+  0% {
+    background-color: red       - on each key frame, the colour changes
+  }
+  25% {
+    background-color: orange
+  }
+  50% {
+    background-color: yellow
+  }
+  75% {
+    background-color: green
+  }
+  100% {
+    background-color: blue
+  }
+}
+
+#box4 {
+  animation: exampleFour 7s 2s forwards;
+}
+
+
+above shows image or object color change. this will then be followed by duration
+forwards - would go back to the default color at the end (blue)
+
+
+
+
+@keyframes exampleFive {
+  0% {
+    left: 0px; top: 0px;        - first movement of the box so starts at 0px
+  }
+  25% {
+    left: 100px; top: 0px;	- second movement across from left (as left point is 100px)
+  }
+  50% {
+    left: 100px; top: 200px; 	- third moving down etc
+  }
+  75% {
+    left: 0px; top: 200px;
+  }
+  100% {
+    left: 0px; top: 0px;
+  }
+}
+
+#box5 {
+  position: relative;		- this keeps the box in its relative position on the page
+  background: red;
+  animation: exampleFive 5s 3s;
+}
+
+
+----------------------------------------------------------------------------------
+
+Position Property & Background Images
+
+
+#box6 {
+  top: 10px;
+  left: 20px;
+  position: relative;
+}
+
+
+absolute -
+
+relative - where its normal position is
+
+
+
+html {
+  background-image: url(AutomAteImage);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+above place an entire image as a background, as a whole - so no tiles etc
+
+
+html{
+  background-image: linear-gradient(to right, green, red);
+}
+
+
+
+above shows how you can place color - can place gradient from left to right
+	or top to bottom
+

@@ -1,0 +1,285 @@
+h1 {
+  color: red;
+  text-shadow:4px 4px 5px grey
+}
+
+.Hello {
+  color: green;
+}
+
+#italic {
+  color: blue;
+}
+
+nav {
+  background-color: green;
+  text-align: center;
+}
+
+.nav-wrapper{
+  background-color: red;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  padding: 30px;
+}
+
+.container {
+  border: 5px solid grey;
+  margin: 50px;
+  padding: 30px;
+}
+
+.box {
+  display: block;
+  background: blue;
+  height: 200px;
+  width: 200px;
+  margin: 10px;
+}
+
+body {
+  margin: 40px;
+}
+
+.wrapper {
+        display: grid;
+    grid-gap: 10px;
+        grid-template-columns: repeat(5, [col] 18.85% ) ;
+        grid-template-rows: repeat(3, [row] auto  );
+        background-color: #fff;
+        color: green;
+    }
+
+    .boxes {
+        background-color: green;
+        color: #fff;
+        border-radius: 5px;
+        padding: 20px;
+        font-size: 150%;
+        z-index:10;
+
+    }
+
+    .a {
+        grid-column: col / span  2;
+        grid-row: row ;
+        display: flex;
+        justify-content: center;
+    }
+    .b {
+        grid-column: col 4 / span  2 ;
+        grid-row: row ;
+        display: flex;
+        justify-content: center;
+    }
+    .c {
+        grid-column: col / span 5 ;
+        grid-row: row 2 ;
+        display: flex;
+        justify-content: center;
+        background-image: linear-gradient(red, orange, black);
+    }
+    .d {
+        grid-column: col  / span  3 ;
+        grid-row: row 3 ;
+        display: flex;
+        justify-content: center;
+    }
+
+    .e {
+        grid-column: col 3 / span  3;
+        grid-row: row 3;
+        display: flex;
+        justify-content: center;
+    }
+
+    .f {
+        grid-column: col 2 / span 3;
+        grid-row: row 2  ;
+        display: flex;
+        justify-content: center;
+        background-color: rgba(49,121,207, 0.5);
+        background-image: linear-gradient(black, orange, red);
+        z-index: 20;
+    }
+
+@keyframes exampleOne{
+  0%{
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#box1 {
+  animation-name: exampleOne;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes exampleTwo {
+  0% {
+    transform: rotate(90deg);
+  }
+    50% {
+      transform: rotate(180deg);
+    }
+      100% {
+        transform: rotate(360deg);
+  }
+}
+
+#box2 {
+  animation-name: exampleTwo;
+  animation-duration: 5s;
+  animation-iteration-count: 4s;
+  animation-timing-function: ease-in-out;
+  border-radius: 10%;
+  background-image: radial-gradient(circle, red,
+    orange, yellow, green);
+}
+
+@keyframes exampleThree {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(.5);
+  }
+}
+
+#box3 {
+  animation: exampleThree infinite 8s ease-in;
+  border-radius: 50%;
+  background: yellow;
+}
+
+
+@keyframes exampleFour {
+  0% {
+    background-color: red
+  }
+  25% {
+    background-color: orange
+  }
+  50% {
+    background-color: yellow
+  }
+  75% {
+    background-color: green
+  }
+  100% {
+    background-color: blue
+  }
+}
+
+#box4 {
+  animation: exampleFour 7s 2s forwards;
+}
+
+
+@keyframes exampleFive {
+  0% {
+    left: 0px; top: 0px;
+  }
+  25% {
+    left: 100px; top: 0px;
+  }
+  50% {
+    left: 100px; top: 200px;
+  }
+  75% {
+    left: 0px; top: 200px;
+  }
+  100% {
+    left: 0px; top: 0px;
+  }
+}
+
+#box5 {
+  position: relative;
+  background: red;
+  animation: exampleFive 5s 3s;
+}
+
+@keyframes exampleSix {
+  0% {
+    left: 0px; top: 0px;
+  }
+  25% {
+    left: 100px; top: 0px;
+  }
+  50% {
+    left: 100px; top: 200px;
+  }
+  75% {
+    left: 0px; top: 200px;
+  }
+  100% {
+    left: 0px; top: 0px;
+  }
+}
+
+#box6 {
+  top: 10px;
+  left: 20px;
+  position: relative;
+}
+
+
+html {
+  background-image: url(AutomAteImage);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+html{
+  background-image: linear-gradient(to right, green, red);
+}
+
+.AutomAteImage {
+  border-radius: 50%;
+  box-shadow: 5px 10px 3px grey;
+}
+
+.Flexbox {
+  border: 3px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.contact-box {
+  display: flex;
+  justify-content: center;
+}
+
+.row {
+  margin: 30px;
+}
+
+.input-field {
+  margin: 20px;
+}
+
+form input, textarea, button {
+  display: block;
+  margin: 30px;
+}

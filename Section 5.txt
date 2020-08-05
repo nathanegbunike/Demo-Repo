@@ -1,0 +1,26 @@
+SECTION 5
+
+Git & Github
+
+
+Git - https://github.com/
+
+open source platform... way to create & store source code (source code - what your code is where its living).
+
+Its a version control system for tracking changes in source code during software devlopment.
+
+designed to coordinate work between programmers and can be used to track changes in any set of files (solo).
+
+
+e.g.
+
+if you want to try out oyur new tech or make chnages, it would make a copy of the master file incase you dont want to keep new changes.
+
+if so, you'll create a 'pull request' and the old and new will be synchronised 
+
+
+e.g. 
+
+if you have multiple programmers, you create diferent branches from the master branch.
+
+--------------------------------------------------------------------------------

@@ -1,0 +1,229 @@
+SECTION 2
+
+CSS Basics
+
+Connect a CSS File & Target HTML Elements
+
+
+CSS can be styled by targeting an HTML element
+
+e.g. 
+
+h1 {
+  color: red;
+}
+
+
+the above will style the H1 title
+	start with the property name and then the value
+
+To link the CSS style sheet with your HTML:
+
+  <title>Coding Practise</title>
+    <link rel="stylesheet" href="style.css"> - type link then insert the stylesheet name
+  </head>
+
+
+the above will target all h1 elements. to avoid this:
+
+
+use a CLASS name
+
+e.g.
+
+to just target -   <h5>Hello World</h5>
+
+would be
+
+<h5 class="Hello">Hello World</h5>
+
+any other h5 would remain the default color - same class gives same color 
+
+
+ID
+
+only speecific to one thing
+
+e.g
+
+  <i id='italic'>This is Italic</i>
+
+call the ID by using '#'
+
+#italic {
+  color: blue;
+}
+
+
+-----------------------------------------------------------------------------------------
+
+CSS Border, Margins & Padding
+
+
+Border
+
+contans three values - height, border line, color
+
+e.g.
+
+.container {
+  border: 5px solid grey;
+}
+
+ the element of the border will go across the page. To change this:
+
+
+
+Padding
+
+this controls the amount of white space inside the border
+
+e.g.
+
+.container {
+  border: 5px solid grey;
+  margin: 50px;
+  padding: 30px;
+}
+
+
+
+Margin
+
+This creates the white space - 
+
+e.g.
+
+
+.container {
+  border: 5px solid grey;
+  margin: 50px;
+}
+
+
+the above will create the white space around the border 
+
+margin-top: 50px; 
+
+above will create the spacing at the top of the border etc
+
+margin: 50px 5px;
+
+above will target 50 for top/bottom
+	left/right would be 5px
+
+it works as top, right, bottom, left (a clockwise fashion when adding value for all four sides
+
+
+
+
+-----------------------------------------------------------------------------------------
+
+Styling the Nav Bar
+
+here you can add various elements to style a nav bar:
+
+
+.box {
+  display: block;    - used for all of your elements e.g. inline will place boxes adjacent
+  background: blue;
+  height: 200px;
+  width: 200px;
+  margin: 10px 0px;
+}
+
+
+
+can simple set the nav bar to a certain theme:
+
+e.g.
+
+nav {
+  background-color: green;
+}
+
+
+
+the above will change the nav bar to the color set.
+to make the text inline:
+
+nav {
+  background-color: green;
+  text-align: center; 
+}
+
+
+to get rid of the underline under each text:
+
+
+a {
+  text-decoration: none;
+}
+
+
+to remove the bullet points just in the Nav bar:
+
+nav ul {
+  list-style: none;
+}
+
+
+and then to display them side by side:
+
+nav li {
+  display: inline-block;
+  padding: 30px;
+}
+
+
+-----------------------------------------------------------------------------------------
+
+Styling Images
+
+can change the shaping to any images 
+
+e.g.
+
+.AutomAteImage {
+  border-radius: 50%;
+}
+
+
+the above with switch the selected sqaure image to a circle
+
+
+
+place a border around the images:
+
+follows the same clockwise identification for bordering (top right bottom left)
+
+
+.AutomAteImage {
+  border-radius: 50%;
+  box-shadow: 5px 10px 3px grey;
+}
+
+
+the box-shadow provides a shadow background to the image in accordance to the px
+
+
+inset
+
+inserts the shadow inside the image
+
+.AutomAteImage {
+  border-radius: 50%;
+  box-shadow: 5px 10px 3px grey;
+  insert;
+}
+
+
+same can be applied to text:
+
+{
+  color: red;
+  text-shadow:4px 4px 5px grey
+}
+
+
+

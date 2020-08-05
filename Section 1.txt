@@ -1,0 +1,192 @@
+SECTION 1
+
+Overview
+
+HTML - hyper text mark up language 
+
+
+New elements included in the HTML5 
+
+<section> 
+
+article, aside, audio, bdi, canvas, datalist, details, embed
+figure, figcaption, footer, header, keygen, mark, meter, nav, output, progress,
+rp, rt, ruby, time, track, video, wbr
+
+there are also new inputs for forms:
+
+tel, search, url, email, datetime, date, month, week, time, datetime-local, 
+number, range, color 
+
+
+new version of HTML:
+
+<!doctype html>   - tells browser its an html page
+
+<html>              - opening tag - encapsulate the html doc 
+
+<head>              - header - dont see in browser - a description
+<meta charset="utf-8">   - kind of character used on this page
+<title>
+</head>
+
+<body>           - body tag - everything you see on the page
+<h1>   </h1>     - elements - with largest text
+<p>    </p>      - element
+</body>
+
+</html>
+
+
+
+CSS - Cascading Style Sheets
+
+used for describing presentation of a document written in mark up language
+e.g. colour, size, underline, images & animation etc 
+
+
+Cascading - refers to which style rules apply if more than one rule mataches a particular element 
+e.g. - make a rule that H1 tag is going to be red
+	but you make the H1 green down the page.
+
+green will overwrite red as its cascading DOWN 
+
+
+a seperate style sheet is best practise. enables sepration of presentaion and content 
+provides:
+
+- more flexibility 
+- multiple webpages share formatting (in seperate .css file)
+- reduces complexity & repititon in structual HTML page
+- present same markup page in differnet styles - for rendering methods e.g. devices
+
+
+
+Responsive Web Design
+
+web pages ar fully functional on all sized devices
+
+
+
+------------------------------------------------------------------------------------
+
+Begining in HTML
+
+H1 - 6 
+
+shows all the different sizes h1 being largest 
+
+These are 'block' elements - meaning they'll go to the next line without a breakline
+
+<div> element is a container - can contain other elemenets
+
+
+<div class="">
+  
+</div>
+
+
+<section>
+  <p>This is a paragraph with normal sized text</p>
+  <i>This is Italic</i>
+  <em>This is emphasised text</em>
+  <strong>This is bold</strong>
+  <b>This is also bold text with a b</b>
+</section>
+
+the elements above are inline
+	to seperate this, you can add a <br> - a single element
+
+
+------------------------------------------------------------------------------------
+
+Links & Navigaton
+
+
+a - is your link tag 
+
+<a href=""> needs an element to be clickable</a>
+
+
+
+can be used as an internal link:
+
+<a href="about.html">Link to internal page</a>
+
+above will take you to about.html an internal link e.g. for a navigation bar
+
+
+
+Navigation Bar
+
+there are two type of lists:
+
+
+- unordered list - list of items with bullet points - <ul>
+- ordered - with numbers
+
+each will have a denoted item - list item - <li>
+
+<header>
+  <nav>
+    <ul>
+      <a href="index.html"><li>Home</li></a>
+      <a href="about.html"><li>About</li></a>
+      <a href="contact.html"><li>Contact</li></a>
+    </ul>
+  </nav>
+</header>
+
+
+
+------------------------------------------------------------------------------------
+
+HTML Images
+
+
+two ways to add images
+
+- saving to desktop/remote access
+- copying the address image from a image online
+
+
+images
+
+
+<img src="" 	- image source or link 
+	alt=""> - file description
+
+
+<img src="AutomAteDnB" alt="AutomAteDnB" height="300">
+
+can use the 'height' after the alt to resize your images
+
+
+<a href="automate-dnb.co.uk"><img src="AutomAteDnB" alt="AutomAteDnB" height="300"></a>
+
+The above shows a clickable image, by placing the image source within a href and the 
+closing 'a' tag
+
+
+------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

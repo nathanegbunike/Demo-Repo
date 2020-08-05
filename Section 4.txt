@@ -1,0 +1,245 @@
+SECTION 4
+
+Forms, Frameworks & CSS Grid
+
+
+Forms
+
+this represnts a collection of form-associated elements, which are submitted to the server for processing 
+
+
+<form>
+  <input type="text" name="name" placeholder="Full Name" required>
+  <input type="email" name="email" placeholder="Email" required>
+  <input type="tel" name="phone_num" placeholder="(555)555-3000"
+  pattern="[\(]\d{3}[\)]\d{3}[\-]\d{4}" required>
+  <textarea name="message" placeholder="Your Message"></textarea>
+  <button type="submit">Submit</button>
+</form>
+
+
+The above is the ful template of a form
+
+
+<input type="text" name="name" placeholder="Full Name" required>
+
+inputs are surrounded by the <form> elements first
+
+the attributes are then in the form via the input type
+	Placeholder - shows the user what should be placed in each box
+	Required - field is required to be filled in - notification if not
+
+
+pattern="[\(]\d{3}[\)]\d{3}[\-]\d{4}"
+
+this shows the format the phone number should be placed in
+	- each character should start with \ and enclosed in a sqaure bracket
+	- to state the number of digits, again starts with \ then 'd' and the 
+		required number in each curly braces
+
+
+
+<textarea name="message" placeholder="Your Message"></textarea>
+
+the text area line represents a muilti line text edit for the elements raw value.
+
+
+ <button type="submit">Submit</button>
+
+another element to process the values 
+
+
+
+form input, textarea, button {
+  display: block;
+  margin: 30px;
+}
+
+above is the CSS styling, again condensed to align the elements and provide spacing between each block 
+
+-------------------------------------------------------------------------------------
+
+Intro to Materialize
+
+
+website provides parts you can add to your webpage:
+
+https://materializecss.com
+
+another is: https://getbootstrap.com/
+
+
+to use elements from Materilize, you'll need to place the following in the head:
+
+this is called a CDN
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+the above is the complied CSS
+
+
+second is the Javascript, which should be placed at the end of the body (to avoid loading java before HTML or CSS in the browser:
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+Nav Bar
+
+
+<nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo center">Contact Me</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact2.html">Contact2</a></li>
+      </ul>
+    </div>
+  </nav>
+
+above is the main components of the nav bar, with links to each page as well as a brand logo
+(which is located in the centre) 
+
+you can move the location of the logo or the links (center, left, right)
+
+colors are changed in your own CSS style sheet
+
+target the class:
+
+.nav-wrapper{
+  background-color: red;		- enter background color
+}
+
+
+-------------------------------------------------------------------------------------
+
+Materilized Continued
+
+
+each element can be retreived from Materilize to place in your form:
+
+<div class="contact-box">
+  <div class="row">
+  <form class="col s12">		- size of the column is 12
+    <div class="row">
+      <div class="input-field col s12">
+        <i class="material-icons prefix">account_circle</i>  	- icon to represent the 										element
+        <input id="icon_prefix" type="text" class="validate">
+        <label for="icon_prefix">Name</label>
+      </div>
+
+
+for icons to work, you need to place the google tag within your HTML header:
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+always place the DIV tags to surround the whole form elements to place further alignment in your CSS
+
+
+target the class, contact-box:
+
+.contact-box {
+  display: flex;
+  justify-content: center;
+}
+
+
+each class can also be targetted e.g. "row" or "input-field"
+
+.row {
+  margin: 30px;
+}
+
+.input-field {
+  margin: 20px;
+}
+
+
+-------------------------------------------------------------------------------------
+
+
+Intro to CSS Grid
+
+
+gridbyexample.com
+
+
+everything you need to know about CSS Grid
+	provide examples for you
+
+
+.a {
+        grid-column: col / span  2;
+        grid-row: row ;
+    }
+    .b {
+        grid-column: col 4 / span  2 ;
+        grid-row: row ;
+    }
+    .c {
+        grid-column: col / span 5 ;
+        grid-row: row 2 ;
+    }
+    .d {
+        grid-column: col 2 / span  1 ;
+        grid-row: row 3 ;
+    }
+
+    .e {
+        grid-column: col 4 / span  1;
+        grid-row: row 3;
+    }
+
+    .f {
+        grid-column: col 2 / span 3;
+        grid-row: row 2  ;
+        background-color: rgba(49,121,207, 0.5);
+        z-index: 20;
+    }
+
+
+the above example provides a 'grid' 
+this grid contain 5 columns and 3 rows
+
+the boxes a placed across each column (span) and start from a certain column (col)
+
+
+z-index - elements that are stacked on each other - represents the depth of the stacking 
+	only works if you're in grid
+
+if not in grid, will only work if the elements are in positioning 
+
+
+-------------------------------------------------------------------------------------
+
+More CSS Grid
+
+
+.wrapper {
+        display: grid;
+    grid-gap: 10px;
+        grid-template-columns: repeat(5, [col] 18.85% ) ;
+        grid-template-rows: repeat(3, [row] auto  );
+        background-color: #fff;
+        color: #444;
+    }
+
+    .boxes {
+        background-color: #444;
+        color: #fff;
+        border-radius: 5px;
+        padding: 20px;
+        font-size: 150%;
+        z-index:10;
+
+
+
+
+
+
+
+
+
+
